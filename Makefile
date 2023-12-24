@@ -1,5 +1,7 @@
 # "hookup-library"  tcc / gcc  
 # clang -- not works -- it even not try to open file . 
+# upd : clang actually works - but it request stats prior to open file via stat/fstat directory first 
+#       add preper hook to stat - resolves issue .
 # 
 # Not a problem to run other simple tools using libc-open and 
 # eg : $ LD_PRELOAD=./libinclude_hook.so  cat "{curl:https://raw.githubusercontent.com/tsoding/sv/master/sv.h}" | cloc 
